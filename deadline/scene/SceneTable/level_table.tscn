@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c68ww6a2mg0kq"]
+
+[ext_resource type="Texture2D" uid="uid://dwnkl4giyidly" path="res://assets/Floor.png" id="1_6qaux"]
+[ext_resource type="Texture2D" uid="uid://dt601iuotnaya" path="res://assets/table.png" id="2_1tgiw"]
+
+[node name="LevelTable" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Floor" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(640, 373.07)
+scale = Vector2(0.658, 0.62)
+texture = ExtResource("1_6qaux")
+
+[node name="Table" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(640, 360)
+texture = ExtResource("2_1tgiw")
