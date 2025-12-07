@@ -1,11 +1,3 @@
 [gd_scene format=3 uid="uid://b1ctwl2nrdw6u"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 53.0
-offset_top = 17.0
-offset_right = 93.0
-offset_bottom = 57.0
