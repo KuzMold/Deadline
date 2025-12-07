@@ -27,15 +27,26 @@ func _input (event: InputEvent):
 	elif event is InputEventMouseMotion and is_dragging and selected_object:
 		selected_object.global_position = get_global_mouse_position() + offset
 
-
-@onready var anim_player = $AnimationPlayer
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@export var rotation_angle: float = 15  # Угол в градусах
+@export var animation_speed: float = 0.3
 
 func _ready():
+	# Убедимся, что смещение (offset) в центре
+	if has_method("set_offset"):
+		offset = Vector2.ZERO
+	
 	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
 
 func _on_mouse_entered():
-	anim_player.play("hover_enter")
-	
+	var tween = create_tween()
+	tween.tween_property(animated_sprite_2d, "rotation_degrees", rotation_angle, animation_speed)\
+		.set_trans(Tween.TRANS_BACK)\
+		.set_ease(Tween.EASE_OUT)
+		
 func _on_mouse_exited():
-	anim_player.play("hover_exit")
+	var tween = create_tween()
+	tween.tween_property(animated_sprite_2d, "rotation_degrees", 0.0, animation_speed)\
+		.set_trans(Tween.TRANS_BACK)\
+		.set_ease(Tween.EASE_OUT)
