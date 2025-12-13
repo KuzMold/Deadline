@@ -1,22 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://c68ww6a2mg0kq"]
+[gd_scene load_steps=5 format=3 uid="uid://c68ww6a2mg0kq"]
 
 [ext_resource type="Texture2D" uid="uid://dwnkl4giyidly" path="res://assets/Floor.png" id="1_6qaux"]
 [ext_resource type="Texture2D" uid="uid://dt601iuotnaya" path="res://assets/table.png" id="2_1tgiw"]
 [ext_resource type="PackedScene" uid="uid://b88shvr5ym3ba" path="res://scene/StaticObj/shredder.tscn" id="3_1tgiw"]
+[ext_resource type="PackedScene" uid="uid://ctnaa4b4mxqoo" path="res://scene/area_2d.tscn" id="5_vpvut"]
 
 [node name="LevelTable" type="Node2D"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Floor" type="Sprite2D" parent="CanvasLayer"]
+[node name="Floor" type="Sprite2D" parent="."]
 position = Vector2(640, 373.07)
 scale = Vector2(0.658, 0.62)
 texture = ExtResource("1_6qaux")
 
-[node name="Table" type="Sprite2D" parent="CanvasLayer"]
+[node name="Table" type="Sprite2D" parent="."]
 position = Vector2(572.565, 360)
 scale = Vector2(0.8, 1)
 texture = ExtResource("2_1tgiw")
 
-[node name="Shredder" parent="CanvasLayer" instance=ExtResource("3_1tgiw")]
+[node name="Shredder" parent="." instance=ExtResource("3_1tgiw")]
 position = Vector2(1158, 440)
+
+[node name="Leaf" parent="." instance=ExtResource("5_vpvut")]
+position = Vector2(444, 253)
