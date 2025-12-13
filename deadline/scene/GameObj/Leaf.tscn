@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ctnaa4b4mxqoo"]
 
-[ext_resource type="Script" uid="uid://dfkrv2ejoxv44" path="res://area_2d.gd" id="1_bcded"]
+[ext_resource type="Script" uid="uid://dfkrv2ejoxv44" path="res://scene/GameObj/Leaf.gd" id="1_bcded"]
 [ext_resource type="Texture2D" uid="uid://donbvf4464oy3" path="res://assets/paper.png" id="2_bcded"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rcc40"]
@@ -18,8 +18,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jkeun"]
-radius = 40.012497
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6t8n"]
+size = Vector2(75.61334, 91.389984)
 
 [node name="Leaf" type="Area2D"]
 script = ExtResource("1_bcded")
@@ -32,4 +32,4 @@ frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.80667114, 1.6949921)
-shape = SubResource("CircleShape2D_jkeun")
+shape = SubResource("RectangleShape2D_m6t8n")

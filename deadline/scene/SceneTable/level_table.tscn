@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dwnkl4giyidly" path="res://assets/Floor.png" id="1_6qaux"]
 [ext_resource type="Texture2D" uid="uid://dt601iuotnaya" path="res://assets/table.png" id="2_1tgiw"]
 [ext_resource type="PackedScene" uid="uid://b88shvr5ym3ba" path="res://scene/StaticObj/shredder.tscn" id="3_1tgiw"]
-[ext_resource type="PackedScene" uid="uid://ctnaa4b4mxqoo" path="res://scene/area_2d.tscn" id="5_vpvut"]
+[ext_resource type="PackedScene" uid="uid://ctnaa4b4mxqoo" path="res://scene/GameObj/Leaf.tscn" id="5_vpvut"]
 
 [node name="LevelTable" type="Node2D"]
 
